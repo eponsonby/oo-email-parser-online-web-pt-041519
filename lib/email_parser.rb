@@ -12,7 +12,7 @@ class EmailParser
   
   def parse
     split = @emails.split(/[\s,]/)
-    split.delete_if()
+    split.delete_if{|el| el.length == 0}
   end
 
     
